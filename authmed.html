@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Authmed - Portfolio</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<style>
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 60px;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; 
+  height: calc(100% - 60px);
+  padding: 10px 30px 0 30px;
+}
+.project-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start; 
+  max-width: 1200px;
+  width: 100%;
+}
+.project-media {
+  flex: 2 1 650px; 
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start; 
+}
+.project-media img, .project-media video {
+  width: 100%;
+  max-height: 500px;
+  border-radius: 28px;
+  border: 4px solid rgba(255,255,255,0.8);
+  box-shadow: 0 0 25px rgba(255,45,149,0.5), 0 0 45px rgba(255,72,176,0.35), 0 0 90px rgba(255,72,176,0.25);
+  transition: all 0.4s ease;
+}
+.project-info {
+  flex: 1 1 450px; 
+  padding-left: 80px;
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  text-align: justify;
+}
+.project-info h1 {
+  font-family: 'Orbitron', sans-serif; 
+  font-size: 3rem;
+  margin-bottom: 15px; 
+  color: var(--y2k-dark);
+}
+.project-info p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(43,15,31,0.85);
+}
+.project-info ul {
+  padding-left: 20px;
+}
+@media (max-width: 900px) {
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-info {
+    padding-left: 0;
+    margin-top: 10px;
+    text-align: left;
+  }
+  .project-media img, .project-media video {
+    max-height: 300px;
+  }
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-y2k">
+  <div class="container-fluid container-main">
+    <a class="navbar-brand" href="index.html"><span class="logo-pill">My Profile</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item me-2"><a class="btn btn-y2k" href="index.html"><i class="bi bi-house-fill me-1"></i> Home</a></li>
+        <li class="nav-item me-2"><a class="btn btn-outline-y2k" href="portfolio.html">Back to Portfolio Page</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="project-container" data-aos="fade-up">
+    <div class="project-media" data-aos="zoom-in" data-aos-delay="100">
+        <!-- FIXED IMAGE TAG -->
+        <img src="assets/authmed-logo.png" alt="AuthMed Logo">
+    </div>
+    <div class="project-info" data-aos="fade-left" data-aos-delay="200">
+      <h1>Authmed</h1>
+      <p>
+        Authmed is a cutting-edge system designed to detect counterfeit medicines through advanced image recognition. 
+        Users can upload or scan the medicine packaging or pill images, and the system verifies its authenticity in real-time.
+      </p>
+      <p>
+        <strong>Features:</strong>
+        <ul>
+          <li>Scan the rear side of the medicine for verification</li>
+          <li>Instant authenticity check with confidence scores</li>
+          <li>User-friendly dashboard to track scanned items</li>
+          <li>Safe and secure storage of scanned history</li>
+        </ul>
+      </p>
+      <p>
+        Authmed ensures patient safety and promotes trust in pharmaceutical products. 
+        It's a perfect blend of computer vision technology and healthcare innovation.
+      </p>
+    </div>
+  </div>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic' });
+</script>
+
+</body>
+</html>

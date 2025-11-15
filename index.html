@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;500;700&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --y2k-fuchsia:#ff2d95;
+  --y2k-hot:#ff48b0;
+  --y2k-accent:#ffd6f0;
+  --y2k-dark:#3a1d2a;
+}
+html,body{height:100%;}
+body{
+  font-family:'Poppins',sans-serif;
+  background:radial-gradient(circle at 10% 20%,rgba(255,72,176,0.09),transparent 10%),linear-gradient(180deg,#fff0f8 0%,#ffe6f6 45%,#fff 100%);
+  color:rgba(43,15,31,0.85);
+  margin:0;
+  padding-top:100px;
+}
+.navbar-y2k{
+  position:fixed;
+  top:12px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:9999;
+  width:calc(100% - 48px);
+  max-width:1200px;
+  background:linear-gradient(90deg,rgba(255,255,255,0.15),rgba(255,255,255,0.05));
+  border-radius:14px;
+  box-shadow:0 12px 40px rgba(255,45,149,0.14);
+  padding:10px 16px;
+  border:1px solid rgba(255,45,149,0.06);
+  backdrop-filter:blur(8px);
+}
+.logo-pill{
+  padding:8px 14px;
+  background:linear-gradient(180deg,var(--y2k-accent),white);
+  border-radius:999px;
+  font-weight:800;
+  color:var(--y2k-dark);
+}
+.btn-y2k,.btn-outline-y2k{
+  background:linear-gradient(90deg,var(--y2k-fuchsia),var(--y2k-hot));
+  color:white!important;
+  padding:8px 14px;
+  border-radius:12px;
+  border:none;
+  box-shadow:0 8px 22px rgba(255,45,149,0.18);
+  transition:all .25s ease;
+}
+.btn-y2k:hover,.btn-outline-y2k:hover{
+  transform:scale(1.05);
+  opacity:.9;
+}
+.card-y2k{
+  background:linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,255,255,0.85));
+  border-radius:14px;
+  padding:16px;
+  box-shadow:0 10px 30px rgba(255,45,149,0.06);
+}
+.hero-wrapper{position:relative;display:inline-block;}
+.hero-img{
+  width:340px;
+  height:340px;
+  border-radius:28px;
+  object-fit:cover;
+  border:4px solid rgba(255,255,255,0.8);
+  box-shadow:0 0 25px rgba(255,45,149,0.5),0 0 45px rgba(255,72,176,0.35),0 0 90px rgba(255,72,176,0.25);
+  transition:all 0.4s ease;
+  animation:glowpulse 4s infinite alternate;
+}
+.hero-img:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 35px rgba(255,45,149,0.7),0 0 65px rgba(255,72,176,0.45),0 0 110px rgba(255,72,176,0.3);
+}
+@keyframes glowpulse{
+  0%{box-shadow:0 0 25px rgba(255,45,149,0.5),0 0 45px rgba(255,72,176,0.35),0 0 90px rgba(255,72,176,0.25);}
+  100%{box-shadow:0 0 40px rgba(255,45,149,0.7),0 0 70px rgba(255,72,176,0.45),0 0 120px rgba(255,72,176,0.35);}
+}
+h1,h2,h3{color:var(--y2k-dark);font-family:'Orbitron',sans-serif;}
+.muted{color:rgba(107,74,90,0.8);}
+.section{padding:80px 0;}
+.footer-note{text-align:center;padding:20px 0;color:var(--y2k-dark);opacity:0.9;}
+.nav-card{cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;}
+.nav-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(255,45,149,0.12);}
+.tag{background:linear-gradient(90deg,var(--y2k-fuchsia),var(--y2k-hot));color:white;padding:6px 10px;border-radius:999px;font-weight:700;font-size:.85rem;}
+.progress{height:12px;border-radius:999px;background:linear-gradient(90deg,#ffe6f3,#fff);}
+.progress-bar{background:linear-gradient(90deg,var(--y2k-fuchsia),var(--y2k-hot));}
+a{text-decoration:none;}
+.container-main{max-width:1100px;margin:0 auto;padding:0 18px;}
+</style>
+<title>Home - Jienne Khalil</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-y2k">
+  <div class="container-fluid container-main">
+    <a class="navbar-brand" href="index.html"><span class="logo-pill">My Profile</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMain">
+      <ul class="navbar-nav ms-auto align-items-center">
+        <li class="nav-item me-2"><a class="btn btn-y2k" href="index.html"><i class="bi bi-house-fill me-1"></i> Home</a></li>
+        <li class="nav-item me-2"><a class="btn btn-outline-y2k" href="education.html">Education</a></li>
+        <li class="nav-item me-2"><a class="btn btn-outline-y2k" href="experience.html">Experience</a></li>
+        <li class="nav-item me-2"><a class="btn btn-outline-y2k" href="skills.html">Skills</a></li>
+        <li class="nav-item me-2"><a class="btn btn-outline-y2k" href="certification.html">Certification</a></li>
+        <li class="nav-item me-2"><a class="btn btn-outline-y2k" href="advocacy.html">Advocacy</a></li>
+        <li class="nav-item"><a class="btn btn-outline-y2k" href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class='container-main'>
+<div class="section" data-aos="fade-up" style="padding-top:20px;">
+  <div class="row align-items-center">
+    <div class="col-lg-6" data-aos="fade-right">
+      <span class="tag">✨ WELCOME TO THE FUTURE</span>
+      <h1 class="display-3 mt-3">DIGITAL<br/>PROFILE</h1>
+      <p class="lead muted">Step into my professional space. Explore my journey through education, experience, and creative projects in this futuristic digital portfolio.</p>
+      <div class="mt-4 d-flex flex-wrap gap-2">
+        <a class="btn btn-y2k btn-lg" href="education.html">Explore Now <i class="bi bi-arrow-right-short"></i></a>
+        <a class="btn btn-y2k btn-lg" href="portfolio.html"><i class="bi bi-stars me-1"></i> Portfolio</a>
+        <button class="btn btn-y2k btn-lg" data-bs-toggle="modal" data-bs-target="#cvModal"><i class="bi bi-download me-1"></i> View CV</button>
+        <button class="btn btn-y2k btn-lg" data-bs-toggle="modal" data-bs-target="#aboutModal"><i class="bi bi-person me-1"></i> About Me</button>
+      </div>
+    </div>
+    <div class="col-lg-6 text-center" data-aos="zoom-in">
+      <div class="hero-wrapper">
+        <img src="assets/me.jpg" alt="profile" class="hero-img"/>
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-5"/>
+
+  <div class="row g-4">
+    <div class="col-md-3" data-aos="fade-up">
+      <div class="card card-y2k nav-card p-3" onclick="location.href='education.html'">
+        <div class="mb-3 w-100" style="height:58px;background:linear-gradient(90deg,#ff2d95,#ff48b0);border-radius:10px;"></div>
+        <h5 class="mt-2">Education</h5>
+        <p class="muted small">Academic Journey & achievements</p>
+      </div>
+    </div>
+    <div class="col-md-3" data-aos="fade-up" data-aos-delay="80">
+      <div class="card card-y2k nav-card p-3" onclick="location.href='experience.html'">
+        <div class="mb-3 w-100" style="height:58px;background:linear-gradient(90deg,#8b5cf6,#06b6d4);border-radius:10px;"></div>
+        <h5 class="mt-2">Experience</h5>
+        <p class="muted small">Professional & academic projects</p>
+      </div>
+    </div>
+    <div class="col-md-3" data-aos="fade-up" data-aos-delay="160">
+      <div class="card card-y2k nav-card p-3" onclick="location.href='skills.html'">
+        <div class="mb-3 w-100" style="height:58px;background:linear-gradient(90deg,#06b6d4,#ff2d95);border-radius:10px;"></div>
+        <h5 class="mt-2">Skills</h5>
+        <p class="muted small">Technical & interpersonal skills</p>
+      </div>
+    </div>
+    <div class="col-md-3" data-aos="fade-up" data-aos-delay="240">
+      <div class="card card-y2k nav-card p-3" onclick="location.href='certification.html'">
+        <div class="mb-3 w-100" style="height:58px;background:linear-gradient(90deg,#ff2d95,#7c3aed);border-radius:10px;"></div>
+        <h5 class="mt-2">Certifications</h5>
+        <p class="muted small">Training & credentials</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="cvModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content card-y2k">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Curriculum Vitae</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img src="assets/cv-lechuga.png" alt="CV" style="max-width:100%;height:auto;"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content card-y2k">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Personal Information</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center mb-3">
+          <img src="assets/me.jpg" alt="profile" class="rounded-circle" style="width:120px;height:120px;"/>
+        </div>
+        <div class="text-center">
+          <p><strong>Full Name:</strong> Jienne Khalil A. Lechuga</p>
+          <p><strong>Age:</strong> 21 years old</p>
+          <p><strong>Personal Email:</strong> jiennekhalill@gmail.com</p>
+          <p><strong>Student Email:</strong> jalechuga@fit.edu.ph</p>
+        </div>
+        <hr/>
+        <h6 class="text-center">About Me</h6>
+        <p>I am <strong>Jienne Khalil A. Lechuga</strong>, a 4th-year Bachelor of Science in Computer Science student at FEU Institute of Technology, with a strong passion for <strong>technology, software development, and problem-solving</strong>.</p>
+        <p>Throughout my academic journey, I have developed skills in <strong>programming, web development, database management, and algorithm design</strong>. I enjoy turning complex problems into efficient, user-friendly solutions through code.</p>
+        <p>My interests include <strong>software engineering, artificial intelligence, data science, and cybersecurity</strong>. I am eager to explore emerging technologies and continuously expand my technical knowledge.</p>
+        <p>I aspire to build a career in the tech industry where I can <strong>contribute to innovative projects, collaborate with like-minded professionals</strong>, and continue growing as a developer and lifelong learner.</p>
+        <hr/>
+        <h6 class="text-center">Skills & Interests</h6>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-translate me-2"></i><strong>Languages:</strong> Fluent in Filipino and English</li>
+          <li><i class="bi bi-award me-2"></i><strong>Certifications:</strong> ITS Python, ITS Project Management, DevNet Associate, CCNAv7</li>
+          <li><i class="bi bi-code me-2"></i><strong>Technical Skills:</strong> Python, C++, Java, MATLAB, HTML, CSS, PHP, SQL</li>
+          <li><i class="bi bi-lightning-charge me-2"></i><strong>Technology & Innovation:</strong> Cybersecurity, Robotics, Gaming</li>
+          <li><i class="bi bi-palette me-2"></i><strong>Design & Arts:</strong> Graphic design, Digital illustration, Content creation, Drawing, Painting</li>
+          <li><i class="bi bi-book me-2"></i><strong>Creative Projects:</strong> Novel writing, Storytelling, Idea development, Baking, Cooking</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  AOS.init({duration:700,once:true,easing:'ease-out-cubic'});
+});
+</script>
+</body>
+</html>
